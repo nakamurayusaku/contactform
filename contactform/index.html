@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>PHP演習課題1</title>
+         
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>お問合せフォーム</h1>
+        
+        <form method="post" action="mail_confirm.php">
+            <div>
+                <div>名前</div>
+                <input type="text" name="name" >
+            </div>
+            <br>
+            <div>
+                <div>メールアドレス</div>
+                <input type="text" name="mail" >
+            </div>
+            <br>
+            <div>
+                <div>年齢</div>
+                <select name="age">
+                    <option>選択してください</option>
+                    <script>
+                        for (var a=18;a<=65;a++){
+                            document.write("<option value=" + a + ">"+ a + "歳</option>");
+                        }
+                    </script>
+                </select>
+            </div>
+            <div>
+                <br>
+                <div>コメント</div>
+                <textarea cols="30" rows="5" name="comment"></textarea>
+            </div>
+            <br>
+            <div>
+                <input type="submit" class="submit" value="送信する">
+            </div>
+          
+        
+        </form>
+        
+        
+    </body>
+</html>
